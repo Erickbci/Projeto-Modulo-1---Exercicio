@@ -72,6 +72,18 @@ def deletarContato(idx_contato):
     del contatos[idx_contato-1]
 
 # - ADICIONAL: Adicionar contato
+def adicionarContato(objeto_contato):
+    nome = objeto_contato[0]
+    telefone = objeto_contato[1]
+    email = objeto_contato[2]
+    favorito = objeto_contato[3]
+    contato = {
+         "name": nome,
+         "phone": telefone,
+         "email": email,
+         "favorite": favorito
+     }
+    contatos.append(contato)
 
 # Como chamar cada função:
 #   visualizarContatos()
@@ -79,3 +91,4 @@ def deletarContato(idx_contato):
 #   visualizarContatosFavoritos(True para favoritos e False para não favoritos)
 #   marcarDesmarcarFavorito(index do contato)
 #   deletarContato(index do contato)
+#   adicionarContato([nome(string), telefone(string), email(string), favorito(booleano)])
